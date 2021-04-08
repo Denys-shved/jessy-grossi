@@ -1,0 +1,545 @@
+@import config
+@import fonts
+@import variables
+// CUSTOM USER STYLES & IMPORTS
+
+.wrapper
+    width: 100%
+    height: 220px
+.header
+    width: 100%
+    max-width: 2395px
+    margin: 0px auto 139px
+    display: flex
+    align-items: center
+    position: fixed
+    left: 50%
+    transform: translate(-50%, 0)
+    z-index: 2
+    padding: 20px 20px 20px 20px
+    background: var(--color-header)
+.name
+    font-family: 'Montserrat-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 130%
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    color: var(--color-accent)
+    flex: auto
+    &__link
+        color: var(--color-accent)
+        &:hover
+            color: var(--color-hover)
+            text-decoration: none
+.navigation
+    display: flex
+    align-items: center
+    &__items
+        font-family: 'Gilroy-Regular'
+        font-style: normal
+        font-weight: 500
+        font-size: 20px
+        line-height: 130%
+        letter-spacing: 0.1em
+        text-transform: uppercase
+        margin: 0 0px 0 71px
+        color: var(--color-accent)
+        &:hover
+            color: var(--color-hover)
+            text-decoration: none
+
+.language
+    display: inline-block
+    width: 24px
+    height: 24px
+    background: url(../images/src/fr.png)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    margin: 0px 0px 0px 71px
+    cursor: pointer
+#menu__toggle
+    display: none
+.main
+    max-width: 2395px
+    margin: 0 auto
+    padding: 0 20px 0 20px
+.marketer img
+    font-size: 20px
+    color: var(--color-accent)
+    .theme-light &
+        filter: brightness(300%)
+.marketer
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-bottom: 658px
+    &__description
+        position: absolute
+        top: 50%
+        right: 17px
+        transform: translate(0, -50%)
+    &__profession
+        font-family: 'Gilroy-Bold'
+        font-style: normal
+        font-weight: bold
+        font-size: 25px
+        line-height: 100%
+        letter-spacing: 0.2em
+        text-transform: uppercase
+        color: var(--color-accent)
+        margin-bottom: 45px
+    &__about
+        font-family: 'Giga-Regular'
+        max-width: 1445px
+        font-style: normal
+        font-weight: normal
+        font-size: 90px
+        line-height: 120%
+        color: var(--color-accent)
+    &__input
+        display: none
+        &:checked ~ label
+            &::before
+                background: var(--color-accent)
+    &__label
+        font-family: 'Gilroy-Bold'
+        font-style: normal
+        font-weight: 600
+        font-size: 20px
+        line-height: 130%
+        letter-spacing: 0.1em
+        text-transform: uppercase
+        color: var(--color-accent)
+        margin-bottom: 0
+        &::before
+            content: ""
+            display: inline-block
+            width: 25px
+            height: 25px
+            background: var(--color-accent)
+            border-radius: 50%
+            margin-right: 29px
+            margin-bottom: 6px
+            vertical-align: middle
+            transition: .2s
+.podcasts
+    position: relative
+    &__title
+        font-family: 'Giga-Regular'
+        font-style: normal
+        font-weight: normal
+        font-size: 120px
+        line-height: 120%
+        color: var(--color-accent)
+        display: inline-block
+        margin-bottom: 77px
+    &__button
+        display: inline-block
+        margin-left: 43px
+        width: 85px
+        height: 85px
+        background: url(../images/src/microphone.png) center no-repeat
+        background-size: cover
+        cursor: pointer
+        margin-bottom: 10px
+        position: relative
+    &__waves
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        width: 38px
+        height: 80px
+        background: var(--color-background)
+        color: var(--color-background)
+        border-radius: 50%
+        text-align: center
+        line-height: 80px
+        font-size: 48px
+        z-index: -1
+        opacity: 0
+        &.active
+            opacity: 1
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            border: 50%
+            border: 4px solid var(--color-accent)
+            left: -20px
+            right: -20px
+            top: -20px
+            bottom: -20px
+            border-radius: 50%
+            animation: animate 1.5s linear infinite
+            opacity: 0
+            backface-visibility: hidden
+        &::after
+            animation-delay: .5s
+
+@keyframes animate
+
+    0%
+
+        transform: scale(0.5)
+        opacity: 0
+
+    50%
+
+        opacity: 1
+
+    100%
+
+        transform: scale(1.2)
+        opacity: 0
+.card
+    display: flex
+    justify-content: space-between
+    border-top: 3px solid var(--color-accent)
+    min-height: 400px
+    color: var(--color-accent)
+    &__name
+        max-width: 50%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        margin-top: 26px
+        margin-bottom: 22px
+    &__title
+        font-family: 'Giga-Regular'
+        max-width: 1055px
+        font-style: normal
+        font-weight: normal
+        font-size: 50px
+        line-height: 120%
+        margin-right: 11px
+    &__signature
+        display: flex
+        font-family: 'Gilroy-Regular'
+        font-style: normal
+        font-weight: 500
+        font-size: 20px
+        line-height: 130%
+        letter-spacing: 0.1em
+        text-transform: uppercase
+        max-width: 57.5%
+        justify-content: space-between
+    &__descriptions
+        display: flex
+        flex-direction: row-reverse
+        max-width: 50%
+        margin-top: 26px
+    &__items
+        max-width: 971px
+        font-family: 'Gilroy-Regular'
+        font-style: normal
+        font-weight: 500
+        font-size: 35px
+        line-height: 140%
+    &__item
+        margin-bottom: 29px
+    &:hover
+        background: var(--color-accent)
+        color: var(--color-background)
+        .card__link
+            color: var(--color-background)
+    &__link
+        display: none
+.opening
+    font-family: 'Gilroy-Bold'
+    font-style: normal
+    font-weight: bold
+    font-size: 25px
+    line-height: 130%
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    color: var(--color-accent)
+    padding-bottom: 9px
+    border-bottom: 4px solid var(--color-accent)
+    margin-bottom: 179px
+    box-sizing: border-box
+    max-width: 173px
+    margin: 27px auto 172px
+    cursor: pointer
+
+@media only screen and (max-width: 1440px)
+    .wrapper
+        height: 170px
+    .header
+        margin: 0px auto 127px
+        max-width: 1374px
+
+    .name
+        font-size: 14px
+    .navigation
+        &__items
+            font-size: 14px
+            margin: 0 0px 13px 53px
+    .language
+        width: 20px
+        height: 20px
+        margin: -13px 0px 0 51px
+    .main
+        max-width: 1378px
+        width: 100%
+    .marketer
+        margin-bottom: 298px
+        &__men
+            max-width: 641px
+            max-height: 600px
+        &__profession
+            font-size: 14px
+            margin-bottom: 40px
+        &__about
+            max-width: 830px
+            font-size: 45px
+        &__label
+            font-size: 14px
+            margin-bottom: 12px
+            margin-right: 6px
+            &::before
+                width: 20px
+                height: 20px
+                margin-right: 25px
+    .podcasts
+        &__list
+            // max-height: 1126px
+        &__title
+            font-size: 70px
+            margin-bottom: 65px
+        &__button
+            width: 50px
+            height: 50px
+            margin-bottom: -5px
+        &__waves
+            width: 25px
+            height: 50px
+
+    .card
+        min-height: 306px
+        border-top: 1px solid var(--color-accent)
+        &__name
+            margin-top: 19px
+        &__title
+            font-size: 30px
+            max-width: 635px
+        &__signature
+            font-size: 11px
+            max-width: 55.5%
+        &__descriptions
+            margin-top: 19px
+        &__items
+            font-size: 20px
+            max-width: 520px
+        &__item
+            margin-bottom: 15px
+
+    .opening
+        margin: 0px auto 98px
+        font-size: 16px
+        max-width: 111px
+        border-bottom: 2px solid var(--color-accent)
+@media only screen and (max-width: 1024px)
+    #menu__toggle
+        display: block
+        opacity: 0
+    .menu__btn
+        display: flex
+        align-items: center
+        position: fixed
+        top: 25px
+        right: 14px
+        width: 26px
+        height: 26px
+        cursor: pointer
+        z-index: 1
+    .menu__btn span
+        &::before
+            display: block
+            position: absolute
+            width: 20px
+            height: 2px
+            background-color: var(--color-accent)
+            content: ''
+            top: -2px
+        &::after
+            display: block
+            position: absolute
+            width: 10px
+            height: 2px
+            background-color: var(--color-accent)
+            content: ''
+            top: 6px
+            right: 6px
+    .navigation
+        display: block
+        position: fixed
+        visibility: hidden
+        top: 25px
+        right: -33%
+        width: 140px
+        height: 255px
+        margin: 0
+        padding: 40px 0
+        list-style: none
+        text-align: center
+        background-color: var(--color-header)
+        transition: .7s
+        &__items
+            display: block
+            padding: 5px 5px
+            font-size: 14px
+            font-weight: 600
+            margin: 5px 10px 5px 20px
+
+    #menu__toggle:checked ~ .navigation
+        visibility: visible
+        right: 7px
+        transition: .7s
+    .language
+        margin: 5px auto 5px
+    .marketer
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        &__description
+            position: relative
+            top: auto
+            right: auto
+            transform: none
+            order: -1
+            margin-bottom: 58px
+        &__checkbox
+            margin-top: 40px
+            align-self: center
+@media only screen and (max-width: 900px)
+    .wrapper
+        height: 184px
+    .marketer
+        margin-bottom: 2px
+        &__about
+            font-size: 40px
+        &__men
+            max-width: 718px
+            max-height: 737px
+        &__profession
+            margin-bottom: 24px
+    .podcasts
+        &__title
+            font-size: 50px
+            margin-bottom: 50px
+        &__button
+            margin-bottom: -3px
+            margin-left: 27px
+    .card
+        &__name
+            margin-top: 50px
+            margin-bottom: 50px
+        &__title
+            font-size: 22px
+            max-width: 333px
+        &__signature
+            font-size: 12px
+            max-width: 334px
+            margin-bottom: 5px
+        &__descriptions
+            margin-top: 50px
+            margin-bottom: 49px
+            margin-right: 14px
+        &__items
+            max-width: 334px
+        &__items p
+            &:last-child
+                margin-bottom: 0
+        &__item
+            margin-bottom: 19px
+@media only screen and (max-width: 774px)
+    .marketer
+        &__men
+            max-width: 100%
+    .podcasts
+        &__title
+            font-size: 45px
+        &__list
+            margin-bottom: 40px
+    .card
+        flex-direction: column
+        justify-content: flex-start
+        position: relative
+        &__name
+            margin-bottom: 30px
+            max-width: 100%
+        &__title
+            max-width: 774px
+        &__descriptions
+            margin-top: 0px
+            flex-direction: row
+            max-width: 100%
+            margin-bottom: 72px
+        &__items
+            max-width: 774px
+        &__signature
+            bottom: 18px
+            position: absolute
+            left: 0
+            max-width: 774px
+            width: 100%
+@media only screen and (max-width: 535px)
+    .wrapper
+        height: 149px
+    .header
+        margin: 0px auto 113px
+    .marketer
+        &__about
+            font-size: 25px
+        &__profession
+            margin-bottom: 20px
+        &__descriptions
+            margin-bottom: 50px
+    .podcasts
+        &__title
+            font-size: 30px
+            margin-bottom: 40px
+        &__button
+            margin-left: 11px
+            width: 30px
+            height: 30px
+        &__waves
+            width: 15px
+            height: 20px
+    .card
+        position: relative
+        &__title
+            font-size: 20px
+        &__name
+            margin-top: 37px
+        &__items
+            font-size: 18px
+        &__descriptions
+            margin-bottom: 40px
+
+        &__link
+            display: block
+            font-family: 'Gilroy-Regular'
+            font-style: normal
+            font-weight: 500
+            font-size: 20px
+            line-height: 130%
+            text-align: center
+            letter-spacing: 0.1em
+            text-transform: uppercase
+            border: 1px solid
+            padding: 17px 0
+            position: relative
+            margin-bottom: 70px
+            &:hover
+                text-decoration: none
+
+@media only screen and (max-width: 366px)
+    .podcasts
+        &__title
+            font-size: 26px
