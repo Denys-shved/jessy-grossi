@@ -10,19 +10,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// function to toggle between light and dark theme
 	function toggleTheme() {
-		if (localStorage.getItem('theme') === 'theme-dark') {
-			setTheme('theme-light');
-		} else {
+		if (localStorage.getItem('theme') === 'theme-light') {
 			setTheme('theme-dark');
+		} else {
+			setTheme('theme-light');
 		}
 	}
 
 	// Immediately invoked function to set the theme on initial load
 	(function () {
-		if (localStorage.getItem('theme') === 'theme-dark') {
+		if (localStorage.getItem('theme') === 'theme-light') {
 			setTheme('theme-dark');
 		} else {
-			setTheme('theme-light');
+			setTheme('theme-dark');
 		}
 	})();
 
